@@ -1,0 +1,35 @@
+testType: web  # Options: web, mobile, api
+
+environment: staging
+
+web:
+  browser: chrome
+  headless: false
+  baseUrl: "https://example.com"
+  timeout: 30
+
+mobile:
+  platformName: Android
+  deviceName: emulator-5554
+  appPackage: com.example.app
+  appActivity: com.example.app.MainActivity
+  udid: emulator-5554
+  appPath: "./apps/app-debug.apk"
+  automationName: UiAutomator2
+
+api:
+  baseUri: "https://api.example.com"
+  authToken: "Bearer your_api_token_here"
+
+database:
+  host: "localhost"
+  port: 5432
+  dbname: "testdata"
+  user: "postgres"
+  password: "password"
+
+minio:
+  endpoint: "http://localhost:9000"
+  accessKey: "minioadmin"
+  secretKey: "minioadmin"
+  bucketName: "automation-screenshots"
